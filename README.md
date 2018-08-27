@@ -1,2 +1,2 @@
 # gudeg
-Web Based Resto Management Application (RMA)
+Web Based Resto Management System (RMS)
