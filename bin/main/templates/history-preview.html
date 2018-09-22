@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+   
+    <head>
+        <meta charset="utf-8"/>
+        <title>Gudeg</title>
+        <link rel="stylesheet" type="text/css" data-th-href="@{/css/print.css}"/>
+    </head>
+    <body>
+    	<div data-th-replace="fragments/common::menu"></div>
+    	<div data-th-each="bill, idx:${billings}">
+    		<table style="width: 100%; border: none">
+    		<thead>
+    		<tr>
+    			<td colspan="3" align="center" style="border-bottom: solid gray 1px;">
+    				<p>
+    					RM AREMA <br/>
+    					Jl. Nusa Indah 1 No 57 Pontianak <br/>
+    					N-DOC-<span data-th-text="${bill.number}"></span>
+    				</p>
+    			</td>
+    		</tr>
+    		</thead>
+    		<tbody>
+    		<tr>
+    			<td style="width: 25px"><span data-th-text="${bill.number}"></span>.<span data-th-text="${idx.index}"></span></td>
+    			<td>Paket Rames</td>
+    			<td style="width: 75px;">Rp <span data-th-text="${#numbers.formatDecimal(bill.day1, 1, 0)}"></span></td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    </body>
+</html>
