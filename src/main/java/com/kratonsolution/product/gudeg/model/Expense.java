@@ -78,6 +78,13 @@ public class Expense {
 
 	private double expense31;
 	
+	public double getTotal() {
+		
+		return monthly+expense1+expense2+expense3+expense4+expense5+expense6+expense7+expense8+expense9+expense10
+				+expense11+expense12+expense13+expense14+expense15+expense16+expense17+expense18+expense19+expense20+
+				expense21+expense22+expense23+expense24+expense25+expense26+expense27+expense28+expense29+expense30+expense31;
+	}
+	
 	@Override
 	public String toString() {
 

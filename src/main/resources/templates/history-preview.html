@@ -8,27 +8,37 @@
     </head>
     <body>
     	<div data-th-replace="fragments/common::menu"></div>
-    	<div data-th-each="bill, idx:${billings}">
-    		<table style="width: 100%; border: none">
+    		<table style="width: 100%; border: none" data-th-each="bill:${billings}">
     		<thead>
     		<tr>
     			<td colspan="3" align="center" style="border-bottom: solid gray 1px;">
     				<p>
     					RM AREMA <br/>
     					Jl. Nusa Indah 1 No 57 Pontianak <br/>
-    					N-DOC-<span data-th-text="${bill.number}"></span>
     				</p>
     			</td>
     		</tr>
+    		<tr>
+    			<th align="left">NOMOR</th>
+    			<th align="right">HARGA (RP)</th>
+    			<th align="right">PPN 10% (RP)</th>
+    		</tr>
     		</thead>
     		<tbody>
-    		<tr>
-    			<td style="width: 25px"><span data-th-text="${bill.number}"></span>.<span data-th-text="${idx.index}"></span></td>
-    			<td>Paket Rames</td>
-    			<td style="width: 75px;">Rp <span data-th-text="${#numbers.formatDecimal(bill.day1, 1, 0)}"></span></td>
+    		<tr data-th-each="info:${bill.details}">
+    			<td align="left" style="width: 40px" data-th-text="${info.number}"/>
+    			<td align="right" style="width: 30px;" data-th-text="${info.price}"/>
+    			<td align="right" style="width: 30px;" data-th-text="${info.tax}"/>
     		</tr>
     		</tbody>
+    		<tfoot>
+    		<tr style="border-bottom: solid gray 1px; border-top: solid gray 1px;">
+    			<td>&nbsp;</td>
+    			<td align="right" data-th-text="${bill.income}"/>
+    			<td align="right" data-th-text="${bill.tax}"/>
+    		</tr>
+    		</tfoot>
     		</table>
-    	</div>
+    		<br/><br/>
     </body>
 </html>
