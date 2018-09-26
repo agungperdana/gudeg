@@ -1,169 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Gudeg</title>
-        <link rel="stylesheet" type="text/css" data-th-href="@{/css/bootstrap.min.css}">
-        <link rel="stylesheet" type="text/css" data-th-href="@{/css/bootstrap-theme.min.css}">
-        <style type="text/css">
-        	html, body {
-        		
-        		margin: 5px;
-        		padding: 5px;
-        	}
-        </style>
-    </head>
+    <head data-th-replace="fragments/common::head"></head>
     <body>
     	<nav data-th-replace="fragments/common::menu"></nav>
-    	<div class="container">
-    		<form data-th-action="@{/report/step/0}" method="post">
-    			<div class="row">
-    				<div class="col-xs-4">
-                		<div class="input-group input-group-sm">
-                			<select id="month" name="month" class="form-control">
-				    			<option value="JANUARY" selected="selected">JANUARY</option>
-				    			<option value="FEBRUARY">FEBRUARY</option>
-				    			<option value="MARCH">MARCH</option>
-				    			<option value="APRIL">APRIL</option>
-				    			<option value="MAY">MAY</option>
-				    			<option value="JUNE">JUNE</option>
-				    			<option value="JULY">JULY</option>
-				    			<option value="AUGUST">AUGUST</option>
-				    			<option value="SEPTEMBER">SEPTEMBER</option>
-				    			<option value="OCTOBER">OCTOBER</option>
-				    			<option value="NOVEMBER">NOVEMBER</option>
-				    			<option value="DECEMBER">DECEMBER</option>
-				    		</select>
-                		</div>
-                		<input id="year" name="year" class="form-control" type="number" value="2018"/>
-                	</div>
-    			</div>
-    		<br/>
-    		<label for="monthly-expense">PENGELUARAN BULANAN</label>
-    		<input id="monthly-expense" name="monthly" type="number" value="0" style="width: 175px; height:25px"/>
-    		<br/>
-    		<label for="expense1">PENGELUARAN TGL 1</label>
-    		<input id="expense1" name="expense1" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		<label for="expense2">PENGELUARAN TGL 2</label>
-    		<input id="expense2" name="expense2" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		<label for="expense3">PENGELUARAN TGL 3</label>
-    		<input id="expense3" name="expense3" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		<label for="expense4">PENGELUARAN TGL 4</label>
-    		<input id="expense4" name="expense4" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense5">PENGELUARAN TGL 5</label>
-    		<input id="expense5" name="expense5" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense6">PENGELUARAN TGL 6</label>
-    		<input id="expense6" name="expense6" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense7">PENGELUARAN TGL 7</label>
-    		<input id="expense7" name="expense7" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense8">PENGELUARAN TGL 8</label>
-    		<input id="expense8" name="expense8" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense9">PENGELUARAN TGL 9</label>
-    		<input id="expense9" name="expense9" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense10">PENGELUARAN TGL 10</label>
-    		<input id="expense10" name="expense10" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense11">PENGELUARAN TGL 11</label>
-    		<input id="expense11" name="expense11" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense12">PENGELUARAN TGL 12</label>
-    		<input id="expense12" name="expense12" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense13">PENGELUARAN TGL 13</label>
-    		<input id="expense13" name="expense13" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense14">PENGELUARAN TGL 14</label>
-    		<input id="expense14" name="expense14" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense15">PENGELUARAN TGL 15</label>
-    		<input id="expense15" name="expense15" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense16">PENGELUARAN TGL 16</label>
-    		<input id="expense16" name="expense16" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense17">PENGELUARAN TGL 17</label>
-    		<input id="expense17" name="expense17" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense18">PENGELUARAN TGL 18</label>
-    		<input id="expense18" name="expense18" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense19">PENGELUARAN TGL 19</label>
-    		<input id="expense19" name="expense19" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense20">PENGELUARAN TGL 20</label>
-    		<input id="expense20" name="expense20" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense21">PENGELUARAN TGL 21</label>
-    		<input id="expense21" name="expense21" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense22">PENGELUARAN TGL 22</label>
-    		<input id="expense22" name="expense22" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense23">PENGELUARAN TGL 23</label>
-    		<input id="expense23" name="expense23" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense24">PENGELUARAN TGL 24</label>
-    		<input id="expense24" name="expense24" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense25">PENGELUARAN TGL 25</label>
-    		<input id="expense25" name="expense25" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense26">PENGELUARAN TGL 26</label>
-    		<input id="expense26" name="expense26" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense27">PENGELUARAN TGL 27</label>
-    		<input id="expense27" name="expense27" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense28">PENGELUARAN TGL 28</label>
-    		<input id="expense28" name="expense28" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense29">PENGELUARAN TGL 29</label>
-    		<input id="expense29" name="expense29" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense30">PENGELUARAN TGL 30</label>
-    		<input id="expense30" name="expense30" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		
-    		<label for="expense31">PENGELUARAN TGL 31</label>
-    		<input id="expense31" name="expense31" type="number" value="0"  style="width: 175px; height:25px"/>
-    		<br/>
-    		<input type="submit" value="NEXT"/>
-    		</form>
-    	</div>
+		<h3>1. MASUKAN PENGELUARAN BULANAN</h3>
+   		<br/>
+   		<form data-th-action="@{/report/step/0}" method="post">
+			<table style="border:none;width: 65%;padding: 3px;">
+			<tbody>
+			<tr>
+				<td>
+					<select id="month" name="month" class="form-control input-sm">
+		    			<option value="JANUARY" selected="selected">JANUARY</option>
+		    			<option value="FEBRUARY">FEBRUARY</option>
+		    			<option value="MARCH">MARCH</option>
+		    			<option value="APRIL">APRIL</option>
+		    			<option value="MAY">MAY</option>
+		    			<option value="JUNE">JUNE</option>
+		    			<option value="JULY">JULY</option>
+		    			<option value="AUGUST">AUGUST</option>
+		    			<option value="SEPTEMBER">SEPTEMBER</option>
+		    			<option value="OCTOBER">OCTOBER</option>
+		    			<option value="NOVEMBER">NOVEMBER</option>
+		    			<option value="DECEMBER">DECEMBER</option>
+   					</select>
+				</td>
+				<td><input id="year" name="year" type="number" class="form-control input-sm" value="2018"/></td>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<td><input id="monthly-expense" name="monthly" type="number" class="form-control input-sm" value="0" placeholder="Pengeluaran bulanan"/></td>
+				<td colspan="3">&nbsp;</td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 1" name="expense1" type="number" class="form-control input-sm" value="0"/></td>
+				<td><input placeholder="Pengeluaran tanggal 2" name="expense2" type="number" class="form-control input-sm" value="0"/></td>
+				<td><input placeholder="Pengeluaran tanggal 3" name="expense3" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 4" name="expense4" type="number" class="form-control input-sm" value="0"  /></td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 5" name="expense5" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 6" name="expense6" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 7" name="expense7" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 8" name="expense8" type="number" class="form-control input-sm" value="0"  /></td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 9" name="expense9" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 10" name="expense10" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 11" name="expense11" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 12" name="expense12" type="number" class="form-control input-sm" value="0"  /></td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 13" name="expense13" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 14" name="expense14" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 15" name="expense15" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 16" name="expense16" type="number" class="form-control input-sm" value="0"  /></td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 17" name="expense17" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 18" name="expense18" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 19" name="expense19" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 20" name="expense20" type="number" class="form-control input-sm" value="0"  /></td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 21" name="expense21" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 22" name="expense22" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 23" name="expense23" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 24" name="expense24" type="number" class="form-control input-sm" value="0"  /></td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 25" name="expense25" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 26" name="expense26" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 27" name="expense27" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 28" name="expense28" type="number" class="form-control input-sm" value="0"  /></td>
+			</tr>
+			<tr>
+				<td><input placeholder="Pengeluaran tanggal 29" name="expense29" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 30" name="expense30" type="number" class="form-control input-sm" value="0"  /></td>
+				<td><input placeholder="Pengeluaran tanggal 31" name="expense31" type="number" class="form-control input-sm" value="0"  /></td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr><td><input class="btn btn-primary" type="submit" value="Simpan & Masukan Tanggal Selanjutnya"/></td></tr>
+			</tfoot>
+			</table>
+  		</form>
     </body>
 </html>
