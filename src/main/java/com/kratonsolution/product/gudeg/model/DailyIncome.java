@@ -1,5 +1,6 @@
 package com.kratonsolution.product.gudeg.model;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -238,505 +239,542 @@ public class DailyIncome {
 		double t_price = 0d;
 		double t_ppn = 0d;
 
-		if(day1-deduction > 5000d) {
+		int index = 1;
+		
+		DecimalFormat format = new DecimalFormat("#");
+		format.setGroupingUsed(true);
+		format.setGroupingSize(3);
+		
+		if(day1-deduction > 1000d) {
 
 			double price = day1-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".01");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 
-		if(day2-deduction > 5000d) {
+		if(day2-deduction > 1000d) {
 
 			double price = day2-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".02");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 
-		if(day3-deduction > 5000d) {
+		if(day3-deduction > 1000d) {
 
 			double price = day3-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".03");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day4-deduction > 5000d) {
+		if(day4-deduction > 1000d) {
 
 			double price = day4-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".04");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day5-deduction > 5000d) {
+		if(day5-deduction > 1000d) {
 
 			double price = day5-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".05");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day6-deduction > 5000d) {
+		if(day6-deduction > 1000d) {
 
 			double price = day6-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".06");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day7-deduction > 5000d) {
+		if(day7-deduction > 1000d) {
 
 			double price = day7-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".07");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day8-deduction > 5000d) {
+		if(day8-deduction > 1000d) {
 
 			double price = day8-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".08");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day9-deduction > 5000d) {
+		if(day9-deduction > 1000d) {
 
 			double price = day9-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".09");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day10-deduction > 5000d) {
+		if(day10-deduction > 1000d) {
 
 			double price = day10-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".10");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day11-deduction > 5000d) {
+		if(day11-deduction > 1000d) {
 
 			double price = day11-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".11");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day12-deduction > 5000d) {
+		if(day12-deduction > 1000d) {
 
 			double price = day12-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".12");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day13-deduction > 5000d) {
+		if(day13-deduction > 1000d) {
 
 			double price = day13-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".13");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day14-deduction > 5000d) {
+		if(day14-deduction > 1000d) {
 
 			double price = day14-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".14");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day15-deduction > 5000d) {
+		if(day15-deduction > 1000d) {
 
 			double price = day15-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".15");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day16-deduction > 5000d) {
+		if(day16-deduction > 1000d) {
 
 			double price = day16-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".16");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day17-deduction > 5000d) {
+		if(day17-deduction > 1000d) {
 
 			double price = day17-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".17");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day18-deduction > 5000d) {
+		if(day18-deduction > 1000d) {
 
 			double price = day18-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".18");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day19-deduction > 5000d) {
+		if(day19-deduction > 1000d) {
 
 			double price = day19-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".19");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day20-deduction > 5000d) {
+		if(day20-deduction > 1000d) {
 
 			double price = day20-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".20");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day21-deduction > 5000d) {
+		if(day21-deduction > 1000d) {
 
 			double price = day21-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".21");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day22-deduction > 5000d) {
+		if(day22-deduction > 1000d) {
 
 			double price = day22-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".22");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day23-deduction > 5000d) {
+		if(day23-deduction > 1000d) {
 
 			double price = day23-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".23");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day24-deduction > 5000d) {
+		if(day24-deduction > 1000d) {
 
 			double price = day24-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".24");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day25-deduction > 5000d) {
+		if(day25-deduction > 1000d) {
 
 			double price = day25-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".25");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day26-deduction > 5000d) {
+		if(day26-deduction > 1000d) {
 
 			double price = day26-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".26");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day27-deduction > 5000d) {
+		if(day27-deduction > 1000d) {
 
 			double price = day27-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".27");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day28-deduction > 5000d) {
+		if(day28-deduction > 1000d) {
 
 			double price = day28-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".28");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day29-deduction > 5000d) {
+		if(day29-deduction > 1000d) {
 
 			double price = day29-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".29");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day30-deduction > 5000d) {
+		if(day30-deduction > 1000d) {
 
 			double price = day30-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".30");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
 		
-		if(day31-deduction > 5000d) {
+		if(day31-deduction > 1000d) {
 
 			double price = day31-deduction;
 			double ppn = price * 0.1;
 
 			Map<String, String> map = new HashMap<>();
-			map.put("number", number+".31");
-			map.put("price", ""+price);
-			map.put("tax", ""+ppn);
+			map.put("number", number+"."+index);
+			map.put("price", format.format(price));
+			map.put("tax", format.format(ppn));
 
 			info.getDetails().add(map);
 
 			t_price += price;
 			t_ppn += ppn;
+			index++;
 		}
-
+		
 		info.setValid(t_price > 0);
-		info.setIncome(t_price+"");
-		info.setTax(""+t_ppn);
+		info.setIncome(format.format(t_price));
+		info.setTax(format.format(t_ppn));
 
 		return info;
 	}

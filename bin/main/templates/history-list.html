@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
    
-    <head>
-        <meta charset="utf-8"/>
-        <title>Gudeg</title>
-    </head>
+    <head data-th-replace="fragments/common::head"></head>
     <body>
     	<div data-th-replace="fragments/common::menu"></div>
-    	<div>
-    		<table style="width: 100%;">
-    		<thead>
-    			<tr style="background-color: black; padding: 0; margin: 0; color: white;">
-    				<th align="left" style="width: 75px;">&nbsp;</th>
-    				<th align="left">Month</th>
-    				<th align="left">Year</th>
-    			</tr>
-    		</thead>
-    		<tbody>
-    		<tr data-th-each="rep:${datas}">
-    			<td align="left">
-    				<a data-th-href="@{/report/history/print-preview/}+${rep.id}">Print</a>
-    				<a data-th-href="@{/report/history/delete?id=}+${rep.id}">Hapus</a>
-    			</td>
-    			<td align="left" data-th-text="${rep.month}"/>
-    			<td align="left" data-th-text="${rep.year}"/>
-    		</tr>
-    		</tbody>
-    		</table>
-    	</div>
+    	<h3>LIST TRANSAKSI BULANAN</h3>
+   		<br/>
+   		<table class="table-striped" style="width: 100%;">
+   		<thead>
+   			<tr>
+   				<th align="left" style="width: 125px;">&nbsp;</th>
+   				<th align="left">Month</th>
+   				<th align="left">Year</th>
+   			</tr>
+   		</thead>
+   		<tbody>
+   		<tr data-th-each="rep:${datas}">
+   			<td align="left">
+   				<a data-th-href="@{/report/history/print-preview/}+${rep.id}">Print</a>&nbsp;|&nbsp;
+   				<a data-th-href="@{/report/history/delete?id=}+${rep.id}">Hapus</a>
+   			</td>
+   			<td align="left" data-th-text="${rep.month}"/>
+   			<td align="left" data-th-text="${rep.year}"/>
+   		</tr>
+   		</tbody>
+   		</table>
     </body>
 </html>

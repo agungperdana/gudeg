@@ -1,4 +1,4 @@
-package com.kratonsolution.product.gudeg.application;
+package com.kratonsolution.product.gudeg.repository;
 
 import java.time.Month;
 import java.util.Optional;

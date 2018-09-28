@@ -9,6 +9,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.kratonsolution.product.gudeg.model.Report;
+import com.kratonsolution.product.gudeg.repository.ReportRepository;
 
 import lombok.NonNull;
 

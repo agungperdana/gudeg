@@ -50,8 +50,8 @@ public class Report {
 		
 		Vector<PPNInfo> infos = new Vector<>();
 
-		String number = "TRX"+month.getValue()+"."+year;
-
+		String number = "TRX-"+year+"."+month.getValue();
+		
 		if(incomes.get("DAY_1").toPPNInfo(number, getDeduction()).isValid()) {
 
 			infos.add(incomes.get("DAY_1").toPPNInfo(number, getDeduction()));
